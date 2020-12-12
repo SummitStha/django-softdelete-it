@@ -1,11 +1,12 @@
 from __future__ import unicode_literals
 
+import six
 from collections import Counter
 from django.db import (models, router, transaction)
 from django.db.models import signals, sql
 from django.contrib.admin.utils import NestedObjects
-from django.db.models.fields import FieldDoesNotExist
-from django.utils import six, timezone
+from django.core.exceptions import FieldDoesNotExist
+from django.utils import timezone
 from operator import attrgetter
 
 
